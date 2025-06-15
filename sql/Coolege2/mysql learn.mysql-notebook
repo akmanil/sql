@@ -1,0 +1,323 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "DB Notebook",
+    "content": "\\about\nCREATE DATABASE college1;\nuse college1;\nCREATE TABLE IF NOT EXISTS  student(\n    id INT PRIMARY KEY,\n    name VARCHAR(50),\n    age INT NOT NULL\n);\nSELECT * FROM student;\n\ninsert into student values (1 , \"Anil\" ,23),(2 , \"Sunil\" ,21) , (3 , \"Sipun\" , 17);\n\nselect * from student;\n\nselect DISTINCT name from student;\n\nselect count( distinct name ) from student;\nselect * from student where name = \"Anil\";\nselect * from student where age > 20;\nselect * from student order by age asc;\nselect * from student where age >20 and name = \"Anil\";\n\ninsert into student values (4 , \"Saroj\" ,22) , (5 , \"Muna\" , 22),(6 , \"Manoj\" ,32) , (7,\"Mitu\" , 28);\n\nselect * from student;\nalter table student add column email varchar(100);\n\nselect * from student;\ninsert into student(id ,name , age ,email) values (8 , \"Sumit\" , 17 , \"sumit03@gmail.com\");\nupdate student set email = \"anil09@gmail.com\" where id = 1 ;\n-- show student;\nselect * from student;\n--  select top 3 from student;\nselect * from student limit 3; -- this is the actuall seclect for my sql avove for sql \n-- select * from student limit count(*) * 0.5;\nselect min(age) as SmallBoy , name from student group by name ;\nselect min(age) from student;\nselect max(age) from student;\n\nselect count(*) from student;",
+    "options": {
+        "tabSize": 4,
+        "indentSize": 4,
+        "insertSpaces": true,
+        "defaultEOL": "LF",
+        "trimAutoWhitespace": true
+    },
+    "viewState": {
+        "cursorState": [
+            {
+                "inSelectionMode": true,
+                "selectionStart": {
+                    "lineNumber": 40,
+                    "column": 30
+                },
+                "position": {
+                    "lineNumber": 40,
+                    "column": 1
+                }
+            }
+        ],
+        "viewState": {
+            "scrollLeft": 0,
+            "firstPosition": {
+                "lineNumber": 18,
+                "column": 1
+            },
+            "firstPositionDeltaTop": -18
+        },
+        "contributionsState": {
+            "editor.contrib.folding": {},
+            "editor.contrib.wordHighlighter": false
+        }
+    },
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 1,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "content": "Welcome to the MySQL Shell - DB Notebook.\n\nPress Ctrl+Enter to execute the code block.\n\nExecute \\sql to switch to SQL, \\js to JavaScript and \\ts to TypeScript mode.\nExecute \\help or \\? for help;",
+                            "language": "ansi"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 6
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 2,
+                "end": 8,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "627a3545-6ecb-473f-9671-6abee3785c81",
+                            "content": "OK, 0 records retrieved in 84.145ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 25
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 25,
+                            "length": 14
+                        },
+                        "contentStart": 26,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 39,
+                            "length": 107
+                        },
+                        "contentStart": 40,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 9,
+                "end": 40,
+                "language": "mysql",
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 22
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 22,
+                            "length": 85
+                        },
+                        "contentStart": 24,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 107,
+                            "length": 24
+                        },
+                        "contentStart": 109,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 131,
+                            "length": 36
+                        },
+                        "contentStart": 133,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 167,
+                            "length": 45
+                        },
+                        "contentStart": 169,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 212,
+                            "length": 43
+                        },
+                        "contentStart": 213,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 255,
+                            "length": 38
+                        },
+                        "contentStart": 256,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 293,
+                            "length": 40
+                        },
+                        "contentStart": 294,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 333,
+                            "length": 55
+                        },
+                        "contentStart": 334,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 388,
+                            "length": 103
+                        },
+                        "contentStart": 390,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 491,
+                            "length": 24
+                        },
+                        "contentStart": 493,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 515,
+                            "length": 51
+                        },
+                        "contentStart": 516,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 566,
+                            "length": 24
+                        },
+                        "contentStart": 568,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 590,
+                            "length": 92
+                        },
+                        "contentStart": 591,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 682,
+                            "length": 61
+                        },
+                        "contentStart": 683,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 743,
+                            "length": 40
+                        },
+                        "contentStart": 761,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 783,
+                            "length": 62
+                        },
+                        "contentStart": 815,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 845,
+                            "length": 168
+                        },
+                        "contentStart": 950,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 1013,
+                            "length": 30
+                        },
+                        "contentStart": 1014,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 1043,
+                            "length": 30
+                        },
+                        "contentStart": 1044,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 1073,
+                            "length": 31
+                        },
+                        "contentStart": 1075,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        }
+    ]
+}
